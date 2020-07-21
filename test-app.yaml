@@ -21,7 +21,7 @@ metadata:
     app: job-csi-driver-test-app
 spec:
   serviceName: "direct-csi-driver-test-app-svc"
-  replicas: 4 # 4 volumes per drive; assuming 7 nodes in cluster
+  replicas: 1 # 4 volumes per drive; assuming 7 nodes in cluster
   selector:
     matchLabels:
       app: job-csi-driver-test-app

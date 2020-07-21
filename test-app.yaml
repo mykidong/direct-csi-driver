@@ -21,7 +21,7 @@ metadata:
     app: job-csi-driver-test-app
 spec:
   serviceName: "direct-csi-driver-test-app-svc"
-  replicas: 112 # 4 volumes per drive; assuming 7 nodes in cluster
+  replicas: 4 # 4 volumes per drive; assuming 7 nodes in cluster
   selector:
     matchLabels:
       app: job-csi-driver-test-app
@@ -43,5 +43,5 @@ spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 10Gi        
+          storage: 10Gi
       storageClassName: direct.csi.driver.min.io # This field references the existing StorageClass
